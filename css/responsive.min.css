@@ -1,0 +1,119 @@
+
+@media only screen and (min-width: 768px) {
+.sidebarWrapper {
+    position: fixed;
+}
+.toggle-btn {
+    position: absolute;
+    visibility: hidden;
+}
+.toggle-placeholder {
+    display: none;
+}
+.service-box, .skill-outer {
+    float: left;
+    width: 50%;
+}
+.service-box:nth-child(2n+1), .skill-outer:nth-child(2n) {
+    padding-left: 25px;
+}
+.service-box:nth-child(2n), .skill-outer:nth-child(2n+1) {
+    padding-right: 25px;
+}
+.portfolio-filter ul li {
+    margin-right: 10px;
+}
+.footer-background ul li:last-child, .portfolio-filter ul li:last-child {
+    margin: 0;
+}
+.contact-form {
+    padding: 0 25px 0 0;
+}
+.contact-info {
+    padding: 0 0 0 25px;
+}
+.footer-background ul li {
+    margin-right: 20px;
+}
+}
+@media only screen and (min-width: 1600px) {
+.aboutWrapper, .blogWrapper, .contactWrapper, .footer-background, .portfolioWrapper, .resumeWrapper, .servicesWrapper, .testimonialWrapper {
+    margin-left: 30%;
+    width: 70%;
+}
+}
+@media only screen and (min-width: 1920px) {
+.aboutWrapper, .blogWrapper, .contactWrapper, .footer-background, .portfolioWrapper, .resumeWrapper, .servicesWrapper, .testimonialWrapper {
+    margin-left: 35%;
+    width: 65%;
+}
+}
+@media only screen and (max-width: 767px) {
+body {
+    background-color: #fff;
+}
+.fixed-left-contact, .fixed-right-socials, .right-br, .left-br {
+    display: none;
+}
+.container {
+    padding: 0 30px;
+}
+.menu {
+    position: relative;
+}
+.nav {
+    background: #141414 none repeat scroll 0 0;
+    box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.3);
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-out 0s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 997;
+}
+.show-nav {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+}
+.stickyNav {
+    left: 30px;
+    position: fixed;
+    right: 30px;
+    width: auto;
+}
+.about-background, .services-background, .skill-outer:last-child {
+    margin: 0;
+}
+.skill-outer {
+    margin-bottom: 30px;
+    width: 100%;
+}
+.service-box {
+    width: 100%;
+}
+.service-box:last-child {
+    margin: 0;
+}
+.portfolio-filter ul {
+    margin: -10px 0;
+}
+.portfolio-filter ul li {
+    margin: 10px 20px 10px 0;
+}
+.blog-post div:last-child {
+    padding: 30px 0 0;
+}
+.contact-form {
+    margin-bottom: 50px;
+}
+.footer-background ul {
+    margin: 20px 0 -10px;
+}
+.footer-background ul li {
+    padding: 10px;
+}
+}
