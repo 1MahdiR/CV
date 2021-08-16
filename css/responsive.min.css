@@ -52,6 +52,9 @@
 body {
     background-color: #fff;
 }
+.loader-bg {
+	top: 41.5%;
+}
 .fixed-left-contact, .fixed-right-socials, .right-br, .left-br {
     display: none;
 }
