@@ -10,17 +10,28 @@
     z-index: 999;
 
 }
+.loader-bg {
+    background-image: url(https://raw.githubusercontent.com/1MahdiR/CV/master/images/favicon2.png);
+    background-size: cover;
+    display: block;
+    height: 67px;
+    margin: 0 auto;
+    position: relative;
+    top: 43%;
+    width: 67px;
+    z-index: -444;
+}
 .loader {
     animation: 2.3s ease 0s normal none infinite running cssload-loader;
     border: 3px solid #fff;
 	border-radius: 50px;
     display: block;
-    height: 40px;
+    height: 70px;
     margin: 0 auto;
     position: relative;
     top: 50%;
     transform: translate(0px, -50%);
-    width: 40px;
+    width: 70px;
 }
 .loader-inner {
     animation: 2.3s ease-in 0s normal none infinite running cssload-loader-inner;
