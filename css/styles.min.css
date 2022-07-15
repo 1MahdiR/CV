@@ -11,7 +11,7 @@ a{
 	color:#232323;
 }
 a:hover{
-	color:#962c33;
+	color:#163a5e;
 }
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus {
     outline: none;
@@ -40,7 +40,7 @@ a:hover{
 }
 .sidebarWrapper {
   left: 0px;
-	background: #962c33;
+	background: #163a5e;
 	text-align: center;
 	height: 100%;
 }
@@ -103,7 +103,7 @@ li {
     margin-bottom: 50px;
 }
 .section-title h2::after {
-   background: #962c33 none repeat scroll 0 0;
+   background: #163a5e none repeat scroll 0 0;
     content: "";
     display: table;
     height: 2px;
@@ -203,7 +203,7 @@ li {
     transition: all 0.1s linear 0s;
 }
 .sidebar .nav li a:hover, .sidebar .nav li.active a {
-    color: #962c33;
+    color: #2a6db0;
     opacity: unset;
 }
 
@@ -266,7 +266,7 @@ li {
     margin: 0;
 }
 .progress-bar {
-    background: #962c33 none repeat scroll 0 0;
+    background: #163a5e none repeat scroll 0 0;
 }
 .services-background {
     margin-bottom: -30px;
@@ -407,7 +407,7 @@ button.mfp-close:hover {
     background: #fff none repeat scroll 0 0;
     border-radius: 50%;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    color: #962c33;
+    color: #163a5e;
     float: left;
     font-size: 29px;
     height: 100px;
