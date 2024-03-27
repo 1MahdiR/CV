@@ -7,11 +7,18 @@ h1, h2 {
 h3, h4 {
     margin: 0 0 10px;
 }
+p {
+    text-align: justify;
+    text-justify: auto;
+}
+u {
+    font-weight: 500;
+}
 a{
-	color:#232323;
+	color:#05855a;
 }
 a:hover{
-	color:#163a5e;
+	color:#00442d;
 }
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus {
     outline: none;
@@ -40,7 +47,7 @@ a:hover{
 }
 .sidebarWrapper {
   left: 0px;
-	background: #163a5e;
+	background: #0db87f;
 	text-align: center;
 	height: 100%;
 }
@@ -103,7 +110,7 @@ li {
     margin-bottom: 50px;
 }
 .section-title h2::after {
-   background: #163a5e none repeat scroll 0 0;
+   background: #165e42 none repeat scroll 0 0;
     content: "";
     display: table;
     height: 2px;
@@ -132,8 +139,7 @@ li {
     width: 60%;
 }
 .sidebar .nav {
-    padding: 20px 30px;
-	background: #fff none repeat scroll 0 0;
+	background: #baffe8 none repeat scroll 0 0;
     padding: 20px 30px;
 }
 .toggle-btn {
@@ -197,13 +203,13 @@ li {
 }
 .sidebar .nav li a {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    color: #232323;
+    color: #747474;
     display: inline-block;
     padding: 0;
     transition: all 0.1s linear 0s;
 }
 .sidebar .nav li a:hover, .sidebar .nav li.active a {
-    color: #2a6db0;
+    color: #003b28;
     opacity: unset;
 }
 
@@ -407,7 +413,7 @@ button.mfp-close:hover {
     background: #fff none repeat scroll 0 0;
     border-radius: 50%;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    color: #163a5e;
+    color: #005236;
     float: left;
     font-size: 29px;
     height: 100px;
@@ -415,15 +421,31 @@ button.mfp-close:hover {
     text-align: center;
     width: 100px;
 }
+
 .resume-box div:last-child {
     padding-left: 130px;
 }
+
 .resume-box span {
     color: #a0a0a0;
     display: block;
     font-weight: 500;
     padding-bottom: 5px;
 }
+
+@media only screen and (max-width: 860px) {
+    .resume-box div:first-child {
+        line-height: 50px;
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+    }
+
+    .resume-box div:last-child {
+        padding-left: 60px;
+    }
+}
+
 .blog-background {
     padding: 100px 0 0;
 }
