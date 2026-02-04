@@ -236,6 +236,94 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const mobileBtn = document.getElementById('mobile-menu-toggle');
+    const navCluster = document.getElementById('nav-cluster');
+    const navTabs = document.querySelectorAll('.tab');
+    
+    const identityBtn = document.getElementById('mobile-identity-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    // 1. Helper to Lock/Unlock Scroll
+    function toggleScrollLock(shouldLock) {
+        if(shouldLock) {
+            document.body.classList.add('scroll-locked');
+        } else {
+            document.body.classList.remove('scroll-locked');
+        }
+    }
+
+    // 2. Right Menu Logic (Navigation)
+    if(mobileBtn && navCluster) {
+        mobileBtn.addEventListener('click', () => {
+            const isActive = navCluster.classList.toggle('active');
+            toggleScrollLock(isActive); // Freeze/Unfreeze body
+            
+            // Exclusive Mode: Close Left Panel if it's open
+            if(sidebar && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                if(identityBtn) {
+                    identityBtn.innerText = "[ ID_ACCESS ]";
+                    identityBtn.style.color = "";
+                    identityBtn.style.borderColor = "";
+                }
+            }
+            
+            // Visual Updates
+            if(isActive) {
+                mobileBtn.innerText = "[ MENU_ACCESS ]";
+                mobileBtn.style.color = "var(--cp-red)";
+                mobileBtn.style.borderColor = "var(--cp-red)";
+            } else {
+                mobileBtn.innerText = "[ MENU_ACCESS ]";
+                mobileBtn.style.color = "var(--cp-blue)";
+                mobileBtn.style.borderColor = "var(--cp-blue)";
+            }
+        });
+
+        // Close menu & unlock scroll when a tab is clicked
+        navTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                if(window.innerWidth <= 950) {
+                    navCluster.classList.remove('active');
+                    toggleScrollLock(false); // <--- CRITICAL: Unlocks scroll
+                    
+                    mobileBtn.innerText = "[ MENU_ACCESS ]";
+                    mobileBtn.style.color = "var(--cp-blue)";
+                    mobileBtn.style.borderColor = "var(--cp-blue)";
+                }
+            });
+        });
+    }
+
+    // 3. Left Drawer Logic (Identity)
+    if(identityBtn && sidebar) {
+        identityBtn.addEventListener('click', () => {
+            const isActive = sidebar.classList.toggle('active');
+            toggleScrollLock(isActive); // Freeze/Unfreeze body
+
+            // Exclusive Mode: Close Right Menu if it's open
+            if(navCluster && navCluster.classList.contains('active')) {
+                navCluster.classList.remove('active');
+                if(mobileBtn) {
+                    mobileBtn.innerText = "[ MENU_ACCESS ]";
+                    mobileBtn.style.color = "var(--cp-blue)";
+                    mobileBtn.style.borderColor = "var(--cp-blue)";
+                }
+            }
+
+            // Visual Updates
+            if(isActive) {
+                identityBtn.innerText = "[ ID_ACCESS ]";
+                identityBtn.style.color = "var(--cp-red)";
+                identityBtn.style.borderColor = "var(--cp-red)";
+            } else {
+                identityBtn.innerText = "[ ID_ACCESS ]";
+                identityBtn.style.color = "";
+                identityBtn.style.borderColor = "";
+            }
+        });
+    }
+
     function initiateBreach() {
         // 1. Audio Unlock
         const AudioContext = window.AudioContext || window.webkitAudioContext;

@@ -30,6 +30,12 @@ body {
     transition: filter 0.05s;
 }
 
+body.scroll-locked {
+    overflow: hidden !important;
+    position: relative;
+    height: 100vh;
+}
+
 @keyframes bg-drift {
     0% { background-position: 0 0; }
     100% { background-position: 100px 100px; }
@@ -375,19 +381,24 @@ body {
     border-right: 2px solid #333; 
     padding-right: 20px; 
     margin-right: 20px;
-    display: flex; flex-direction: column; z-index: 10;
-
-    height: 100%;
-}
-
-.sidebar-panel { 
     display: flex; 
     flex-direction: column; 
+    z-index: 10;
     
-    /* --- THESE ARE THE KEY CHANGES --- */
-    height: 100%;                /* Forces it to stretch to the bottom of the .sidebar */
-    margin-bottom: 0 !important; /* Removes the bottom gap */
+    /* FIX: Force height to 100% and DISABLE main scroll */
+    height: 100%;
+    overflow: hidden !important; 
+}
+
+.sidebar-panel {
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; /* Fill the parent height */
     padding-bottom: 0; 
+    overflow: hidden; /* Prevent spillover */
+    border: 1px solid var(--cp-yellow); 
+    background: rgba(0, 0, 0, 0.3); 
+    padding: 15px; /* Keep original padding */
 }
 
 /* Common Decor Box Style */
@@ -485,9 +496,33 @@ body {
 
 .sidebar-data-container {
     text-align: left;
-    margin-top: 5px;
-    flex: 1;
+    margin-top: 15px; /* Add separation from the fixed header */
+    
+    /* FLEX MAGIC: This forces it to fill the remaining bottom space */
+    flex: 1; 
+    
+    /* ENABLE SCROLLING ONLY HERE */
+    overflow-y: auto; 
+    
+    /* Spacing so text doesn't hit the scrollbar */
+    padding-right: 5px; 
+    
+    /* Cyberpunk Scrollbar Styling */
+    scrollbar-width: thin; 
+    scrollbar-color: var(--cp-red) transparent;
 }
+
+/* Webkit Scrollbar Styling (Chrome/Safari) */
+.sidebar-data-container::-webkit-scrollbar {
+    width: 3px;
+}
+.sidebar-data-container::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.3);
+}
+.sidebar-data-container::-webkit-scrollbar-thumb {
+    background-color: var(--cp-red);
+}
+
 .stat-row {
     display: flex;
     justify-content: space-between;
@@ -602,4 +637,328 @@ a { color: var(--cp-blue); text-decoration: none; border-bottom: 1px dashed var(
 
 .hub-btn:active {
     transform: translateY(1px);
+}
+
+
+
+
+
+.mobile-header-row { display: none; }
+
+/* Desktop: Nav Cluster acts as a flexible row */
+.nav-cluster {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.stats-group { display: flex; gap: 200px; }
+
+/* --- MOBILE VIEW (Max Width 950px) --- */
+@media screen and (max-width: 950px) {
+
+    /* 1. SCROLLING ENGINE & FOOTER FIX */
+    body, html {
+        height: auto !important;
+        overflow-x: hidden; /* Prevent horizontal wobble */
+        -webkit-overflow-scrolling: touch; /* Smooth momentum scrolling on iOS */
+    }
+
+    .container {
+        /* CHANGED: Use Flexbox to manage vertical spacing */
+        display: flex !important;
+        flex-direction: column;
+        
+        /* CHANGED: Forces container to fill at least the whole screen */
+        min-height: 100vh;
+        height: auto !important;
+        
+        padding: 0;
+        overflow: visible !important;
+    }
+
+    .main-interface {
+        /* CHANGED: Flexbox here too */
+        display: flex !important;
+        flex-direction: column;
+        
+        /* CRITICAL: This pushes the footer to the bottom */
+        flex: 1; 
+        
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .content-viewer {
+        flex: 1; /* Ensures content area expands if needed */
+        height: auto !important;
+        overflow: visible !important;
+        padding: 20px 15px 40px 15px; /* Bottom padding for aesthetics */
+        background: transparent;
+        border: none;
+    }
+
+    /* 2. HEADER & TOGGLES */
+    .top-bar {
+        flex-direction: column;
+        padding: 0;
+        border-bottom: none;
+        position: relative;
+        z-index: 1000;
+        height: auto;
+    }
+
+    .mobile-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 15px 20px;
+        background: rgba(0, 0, 0, 0.95);
+        border-bottom: 2px solid var(--cp-red);
+        position: sticky; /* Keeps the buttons visible while scrolling */
+        top: 0;
+        z-index: 2000;
+    }
+
+    .mobile-brand {
+        color: var(--cp-yellow);
+        font-family: var(--font-header);
+        font-weight: bold;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .sys-menu-btn {
+        background: rgba(0,0,0,0.5);
+        border: 1px solid var(--cp-blue);
+        color: var(--cp-blue);
+        padding: 8px 12px;
+        font-family: var(--font-main);
+        font-weight: bold;
+        font-size: 0.8rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* 3. SUB-NAV BAR (The "Bio/Background" Tabs) */
+    /* Updated to Fit Screen Width Perfectly */
+    .sub-nav-bar {
+        display: flex;          /* Use flexbox to distribute space */
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: rgba(0,0,0,0.8);
+        border-bottom: 1px solid #333;
+        position: sticky;       /* Stick below the header */
+        top: 60px;              /* Height of mobile-header-row */
+        z-index: 500;
+    }
+    
+    .sub-nav-item {
+        flex: 1;                /* Each tab takes equal width */
+        text-align: center;
+        padding: 12px 5px;      /* Reduced side padding */
+        font-size: 0.85rem;     /* Slightly smaller text to prevent wrapping */
+        margin: 0;
+        border: none;           /* Remove old borders */
+        border-bottom: 2px solid transparent; /* Prepare for active state */
+        clip-path: none;        /* Remove the polygon shape for clean mobile squares */
+        background: transparent;
+    }
+
+    .sub-nav-item.active {
+        background: rgba(255, 0, 60, 0.1);
+        color: var(--cp-red);
+        border-bottom: 2px solid var(--cp-red);
+        box-shadow: none;
+        padding: 12px 5px; /* Keep size consistent */
+    }
+
+    /* 4. DRAWER PANELS (Hidden by default) */
+    
+    /* LEFT PANEL (Identity) */
+    .sidebar {
+        position: fixed;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        max-width: 560px;
+        height: calc(100vh - 60px);
+        background: rgba(5, 5, 5, 0.98);
+        border-right: 2px solid var(--cp-cyan);
+        z-index: 3000;
+        transform: translateX(-110%);
+        transition: transform 0.3s ease;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    .sidebar.active { transform: translateX(0); }
+    .sidebar-panel { height: auto; margin-bottom: 0; }
+    .avatar-container { margin: 0 auto 20px auto; max-width: 100%; }
+
+    /* RIGHT PANEL (Main Menu) */
+    .nav-cluster {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 100%; /* Full width for menu */
+        height: calc(100vh - 60px);
+        background: rgba(5, 5, 5, 0.98);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 40px 30px;
+        transition: transform 0.3s ease;
+        transform: translateX(110%); /* Use translate instead of right property for performance */
+        z-index: 3000;
+        display: flex;
+    }
+    .nav-cluster.active { transform: translateX(0); }
+    
+    .stats-group {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 30px;
+        border-bottom: 1px dashed #333;
+        padding-bottom: 20px;
+        gap: 50px;
+    }
+    
+    .menu-tabs { flex-direction: column; text-align: center; width: 100%; }
+    .tab { font-size: 1.5rem; padding: 15px; width: 100%; display: block; }
+    .action-box { margin-top: auto; width: 100%; }
+    .download-btn { justify-content: center; padding: 15px; }
+    .bottom-bar { padding: 5px;}
+
+    /* 1. Resize Giant Headers */
+    h1 {
+        font-size: 1.7rem !important; /* Down from 2.5rem */
+        line-height: 1.2 !important;  /* Tighter spacing for multi-line headers */
+        margin-bottom: 15px !important;
+        word-wrap: break-word;        /* Prevents long words from breaking layout */
+    }
+
+    .glitch-header {
+        font-size: 2rem !important;   /* Special size for your Name in Bio */
+        margin-bottom: 5px !important;
+    }
+
+    h2 {
+        font-size: 1.2rem !important;
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+    }
+
+    h3, .sub-header {
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+        color: var(--cp-blue);        /* Ensure contrast */
+    }
+
+    /* 2. Improve Paragraph Readability */
+    p, li, .terminal-text {
+        font-size: 0.95rem !important; /* Comfortable reading size for phones */
+        line-height: 1.6 !important;   /* More space between lines of text */
+        margin-bottom: 15px !important;
+        max-width: 100%;
+    }
+
+    /* 3. Compact Mission Cards (Experience/Projects) */
+    .mission-card {
+        padding: 15px !important;      /* Reduce padding */
+        margin-bottom: 20px !important;
+        border-left-width: 3px !important; /* Slightly thinner accent border */
+    }
+    
+    .mission-card h2 {
+        margin-top: 0 !important;      /* Remove top margin inside cards */
+        font-size: 1.1rem !important;
+    }
+
+    /* 4. Fix Tag Wrapping (Django/Docker buttons) */
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .tags span {
+        font-size: 0.75rem !important;
+        padding: 4px 8px !important;
+        margin: 0 !important; /* Reset margins to let flex gap handle spacing */
+        flex-grow: 0;
+    }
+
+    /* 5. Skill Bars */
+    .skill-container {
+        margin-bottom: 20px !important;
+    }
+    
+    .skill-label {
+        font-size: 0.9rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .nav-cluster, .sidebar {
+        background: #050505 !important; /* Solid dark background */
+        backdrop-filter: none !important; /* Remove blur for cleaner look */
+    }
+}
+
+/* =======================================================
+   COMPACT DESKTOP MODE (Laptops & Tablets: 950px - 1250px)
+   ======================================================= */
+@media screen and (min-width: 951px) and (max-width: 1250px) {
+    
+    /* 1. Slimmer Sidebar */
+    .sidebar {
+        width: 240px !important; /* Reduce width from 300px to 240px */
+        padding-right: 15px;
+        margin-right: 15px;
+    }
+
+    /* 2. Scale Down Sidebar Text */
+    .stat-row {
+        font-size: 0.8rem; /* Make stats text smaller to fit */
+    }
+    .stat-label {
+        margin-right: 5px;
+    }
+    .ncpd-label {
+        font-size: 0.9rem; /* Prevent name from wrapping */
+        letter-spacing: 1px;
+    }
+    .social-icon {
+        width: 18px; /* Slightly smaller icons */
+        height: 18px;
+    }
+
+    /* 3. Adjust Header Spacing */
+    .stats-group {
+        gap: 45px !important; /* Tighter spacing for top stats */
+    }
+    .menu-tabs {
+        gap: 15px !important; /* Tighter tabs */
+    }
+    .tab {
+        font-size: 1.1rem; /* Smaller tab text */
+    }
+
+    /* 4. Main Content Scaling */
+    .main-interface {
+        gap: 0; 
+    }
+    h1 {
+        font-size: 2rem; /* Prevent giant headers from dominating */
+    }
+}
+
+body.scroll-locked, 
+html.scroll-locked {
+    overflow: hidden !important;
+    touch-action: none; /* Disables touch gestures on the background */
+    height: 100vh !important;
 }

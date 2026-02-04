@@ -59,28 +59,45 @@
 
     <div class="container" id="main-interface-container">
         <header class="top-bar">
-            <div class="level-box">
-                <span class="label">EXP</span>
-                <span class="value">5 YRS</span>
+            <div class="mobile-header-row">
+                <button class="sys-menu-btn" id="mobile-identity-toggle">
+                    [ ID_ACCESS ]
+                </button>
+
+
+                <button class="sys-menu-btn" id="mobile-menu-toggle">
+                    [ MENU_ACCESS ]
+                </button>
             </div>
-            <div class="cred-box">
-                <span class="value" id="github-stats">LOADING...</span>
-                <span class="label">&nbsp;COMMITS</span>
-            </div>
-            <div class="menu-tabs">
-                <div class="tab active" data-target="profile">PROFILE</div>
-                <div class="tab" data-target="skills">SKILLS & PERKS</div>
-                <div class="tab" data-target="missions">MISSIONS</div>
-                <div class="tab" data-target="archives">ARCHIVES</div>
-            </div>
-            <div class="action-box">
-                <a target="_blank" href="assets/docs/Amir_Mahdi_Rasouli_CV.pdf" class="download-btn" download>
-                    <svg class="icon-download" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 16V17C4 18.6569 5.34315 20 7 20H17C18.6569 20 20 18.6569 20 17V16M12 4V15M12 15L8 11M12 15L16 11" 
-                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Download CV
-                </a>
+
+            <div class="nav-cluster" id="nav-cluster">
+                <div class="stats-group">
+                    <div class="level-box">
+                        <span class="label">EXP</span>
+                        <span class="value">5 YRS</span>
+                    </div>
+                    <div class="cred-box">
+                        <span class="value" id="github-stats">LOADING...</span>
+                        <span class="label">&nbsp;COMMITS</span>
+                    </div>
+                </div>
+
+                <div class="menu-tabs">
+                    <div class="tab active" data-target="profile">PROFILE</div>
+                    <div class="tab" data-target="skills">SKILLS & PERKS</div>
+                    <div class="tab" data-target="missions">MISSIONS</div>
+                    <div class="tab" data-target="archives">ARCHIVES</div>
+                </div>
+
+                <div class="action-box">
+                    <a target="_blank" href="assets/docs/Amir_Mahdi_Rasouli_CV.pdf" class="download-btn" download>
+                        <svg class="icon-download" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 16V17C4 18.6569 5.34315 20 7 20H17C18.6569 20 20 18.6569 20 17V16M12 4V15M12 15L8 11M12 15L16 11" 
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Download CV
+                    </a>
+                </div>
             </div>
         </header>
 
