@@ -906,6 +906,48 @@ a { color: var(--cp-blue); text-decoration: none; border-bottom: 1px dashed var(
         background: #050505 !important; /* Solid dark background */
         backdrop-filter: none !important; /* Remove blur for cleaner look */
     }
+
+    .sys-lock-container {
+        padding: 30px 15px; /* Reduced padding for mobile */
+        width: 90%; /* Ensures it doesn't hit the screen edges */
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .locked-title {
+        font-size: 1.8rem !important; /* Scaled down from 3rem */
+        letter-spacing: 2px;
+    }
+
+    .locked-sub {
+        font-size: 0.75rem !important;
+        margin-bottom: 25px;
+    }
+
+    .breach-action {
+        font-size: 0.9rem !important;
+        padding: 12px 10px;
+    }
+
+    .cyber-glitch {
+        font-size: 1.8rem !important; /* Prevents overflow during the loading sequence */
+        letter-spacing: 2px;
+    }
+    
+    .sub-text {
+        font-size: 0.8rem !important;
+        margin-bottom: 15px;
+    }
+
+    .loading-bar-frame {
+        width: 80%; /* Changed from fixed 300px */
+        max-width: 300px;
+    }
+    
+    .terminal-window {
+        width: 90%; /* Changed from fixed 350px */
+        max-width: 350px;
+    }
 }
 
 /* =======================================================
