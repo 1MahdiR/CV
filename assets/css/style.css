@@ -157,9 +157,6 @@ body.scroll-locked {
 .blink { animation: blink-text 1s infinite; }
 @keyframes blink-text { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-/* Utility to hide elements */
-.hidden { display: none !important; }
-
 /* --- BREACH TRANSITION FX --- */
 .breach-mode {
     animation: breach-sequence 0.5s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
@@ -289,7 +286,6 @@ body.scroll-locked {
 .loading-bar-fill { height: 100%; width: 0%; background-color: var(--cp-red); transition: width 0.3s ease-out; }
 .terminal-window { width: 350px; height: 120px; overflow: hidden; color: #888; font-family: var(--font-main); font-size: 0.9rem; text-align: left; border-top: 1px dashed #333; padding-top: 10px; background: rgba(0,0,0,0.8); }
 .terminal-window li { list-style: none; margin-bottom: 2px; }
-.fade-out { opacity: 0; pointer-events: none; transition: opacity 0.2s ease-out; }
 .distort-active { filter: url('#distortion-filter'); }
 .glitch-slice { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999999; pointer-events: none; mix-blend-mode: hard-light; }
 
@@ -412,10 +408,6 @@ body.scroll-locked {
 }
 
 /* Avatar Panel Specifics */
-.avatar-panel {
-    display: flex;
-    flex-direction: column;
-}
 
 .avatar-container { width: 100%; position: relative; border: 2px solid var(--cp-cyan); margin-bottom: 15px; overflow: hidden; }
 .avatar-container::before {
@@ -719,14 +711,6 @@ a { color: var(--cp-blue); text-decoration: none; border-bottom: 1px dashed var(
         position: sticky; /* Keeps the buttons visible while scrolling */
         top: 0;
         z-index: 2000;
-    }
-
-    .mobile-brand {
-        color: var(--cp-yellow);
-        font-family: var(--font-header);
-        font-weight: bold;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
     }
 
     .sys-menu-btn {

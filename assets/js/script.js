@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const parentStartScreen = document.getElementById('start-screen');
     const startScreen = document.getElementById('sys-lock-container');
     const loaderWrapper = document.getElementById('loader-wrapper');
-    const breachBtn = document.getElementById('breach-btn');
+    // REMOVED: unused 'breachBtn' variable
 
     // --- UPDATED PATH HERE ---
     const breachSound = new Audio('assets/audio/breach_in.ogg');
