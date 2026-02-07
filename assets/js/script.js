@@ -3,31 +3,25 @@ const database = {
     profile: {
         items: [
             {
-                label: "Bio",
+                label: "About",
                 content: `
                     <div class="bio-container fade-in">
                         <h1 class="glitch-header">AMIR MAHDI RASOULI</h1>
-                        <h3 class="sub-header">BACKEND ENGINEER & RESEARCHER</h3>
+                        <h3 class="sub-header">BACKEND & SYSTEMS ENGINEER</h3>
 
-                        <div style="display: flex; gap: 20px; margin: 15px 0; border-bottom: 1px solid #333; padding-bottom: 15px; flex-wrap: wrap;">
+                        <div style="display: flex; gap: 20px; margin: 15px 0; border-bottom: 1px solid #333; padding-bottom: 15px;">
                             <span class="terminal-text" style="color: var(--cp-yellow);"><i class="fas fa-user-clock"></i> 24 Years Old</span>
                             <span class="terminal-text" style="color: var(--cp-yellow);"><i class="fas fa-map-marker-alt"></i> Tehran, Iran</span>
-                            <span class="terminal-text" style="color: var(--cp-yellow);"><i class="fas fa-graduation-cap"></i> M.Sc. Student</span>
                         </div>
 
                         <p class="terminal-text">
+                            <strong>// SYSTEM SUMMARY</strong><br/>
                             I am a Computer Engineering graduate and currently a Master's student in Computer Architecture at <span class="highlight">Sharif University of Technology</span>. My academic work centers on dependable edge/fog computing, real-time systems, and distributed computing.
                         </p>
 
                         <p class="terminal-text">
                             Professionally, I have over <span class="highlight">5 years of experience</span> as a programmer. While my primary focus is building scalable backend architectures using <strong>Python (Django)</strong> and <strong>DevOps</strong> workflows, I am a versatile engineer. My background includes significant experience in <strong>Front-end development</strong> (JavaScript) and <strong>Android app development</strong> (Java), allowing me to understand the full lifecycle of software products.
                         </p>
-
-                        <div style="border-left: 3px solid var(--cp-cyan); padding-left: 15px; margin: 20px 0; background: rgba(0, 240, 255, 0.05);">
-                            <p class="terminal-text" style="margin: 10px 0;">
-                                <strong>Main Mission:</strong> Continuous learning, scalable design, and reliable engineering.
-                            </p>
-                        </div>
 
                         <p class="terminal-text" style="color: #aaa; font-size: 0.9em; font-style: italic;">
                             Outside of work, I'm passionate about the Open Source community, Linux systems, Network Security, Indie Games, and Metal/Rock music.
@@ -39,19 +33,19 @@ const database = {
                             </p>
                             
                             <div class="hub-grid">
-                                <button class="hub-btn" onclick="document.querySelector('[data-tab=\'skills\']').click()">
-                                    <i class="fas fa-microchip"></i>
-                                    <span>Tech Stack</span>
-                                </button>
-
-                                <button class="hub-btn" onclick="document.querySelector('[data-tab=\'missions\']').click()">
-                                    <i class="fas fa-tasks"></i>
-                                    <span>Projects</span>
-                                </button>
-
-                                <button class="hub-btn" onclick="document.querySelector('[data-tab=\'archives\']').click()">
+                                <button class="hub-btn" onclick="document.querySelector('[data-target=Background]').click()">
                                     <i class="fas fa-history"></i>
                                     <span>Background</span>
+                                </button>
+
+                                <button class="hub-btn" onclick="document.querySelector('[data-target=skills]').click()">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Skills</span>
+                                </button>
+
+                                <button class="hub-btn" onclick="document.querySelector('[data-target=missions]').click()">
+                                    <i class="fas fa-tasks"></i>
+                                    <span>Missions</span>
                                 </button>
                             </div>
                         </div>
@@ -73,17 +67,140 @@ const database = {
                     </div>`
             },
             {
-                label: "Contact",
+                label: "Connect",
                 content: `
-                    <div class="content-wrapper">
-                        <h1>CURRENT OBJECTIVE</h1>
-                        <p>I plan to pursue a PhD in dependable and secure edge computing systems, with a focus on Edge AI and resilient distributed environments.</p>
-                        <br>
-                        <h3>RESEARCH INTERESTS</h3>
-                        <p>> Dependable Edge Computing</p>
-                        <p>> Edge AI & Machine Learning</p>
-                        <p>> Secure Distributed Systems</p>
-                        <p>> Energy-Efficient Computing</p>
+                    <style>
+                        /* PAGE SPECIFIC STYLES */
+                        .status-bar { display: flex; gap: 15px; font-size: 0.75rem; color: #555; margin-bottom: 20px; border-bottom: 1px dashed #333; padding-bottom: 5px; flex-wrap: wrap; }
+                        .status-item i { margin-right: 5px; color: var(--cp-blue); }
+                        .burner-active { filter: grayscale(100%) contrast(1.5) brightness(0.8); }
+                        .burner-btn.active { background: var(--cp-red); color: #000; box-shadow: 0 0 15px var(--cp-red); }
+                        .hex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(20px, 1fr)); gap: 2px; opacity: 0.2; margin-bottom: 15px; }
+                        .hex { height: 4px; background: var(--cp-cyan); }
+                        .input-cyber { background: rgba(0,0,0,0.5); border: 1px solid #444; color: var(--cp-yellow); padding: 8px; font-family: monospace; width: 100%; margin-top: 5px; outline: none; transition: 0.3s; }
+                        .input-cyber:focus { border-color: var(--cp-yellow); box-shadow: 0 0 10px rgba(252, 238, 9, 0.2); }
+                    </style>
+
+                    <div class="content-wrapper" id="connect-interface">
+
+                        <h1 class="glitch-header">CONNECT</h1>
+                        <div class="status-bar">
+                            <span class="status-item"><i class="fas fa-globe"></i> LOC: TEHRAN (GMT+3.5)</span>
+                            <span class="status-item"><i class="fas fa-clock"></i> UPTIME: N/A</span>
+                            <span class="status-item"><i class="fas fa-shield-alt"></i> SECURITY: ENCRYPTED (TLS 1.3)</span>
+                            <span class="status-item" style="margin-left: auto; color: var(--cp-green);"><i class="fas fa-signal"></i> SIGNAL: STRONG</span>
+                        </div>
+
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 25px;">
+                            
+                            <div class="mission-card" style="flex: 1 1 300px; margin: 0; display: flex; flex-direction: column;">
+                                <h2><i class="fas fa-broadcast-tower"></i> DIRECT FREQUENCIES</h2>
+
+                                <ul class="terminal-list" style="padding-left:0; list-style:none; flex-grow: 1;">
+                                    
+                                    <li style="margin-bottom: 15px; border-left: 2px solid var(--cp-yellow); padding-left: 10px;">
+                                        <span style="font-size: 0.7em; color: #aaa;">// PRIMARY_MAIL_RELAY</span><br>
+                                        <a href="mailto:a.m.rasouli.n@gmail.com" class="highlight" style="text-decoration: none; border-bottom: 1px dotted var(--cp-yellow);">
+                                            a.m.rasouli.n@gmail.com <i class="fas fa-envelope" style="margin-left: 8px;"></i>
+                                        </a>
+                                    </li>
+
+                                    <li style="margin-bottom: 15px; border-left: 2px solid var(--cp-red); padding-left: 10px;">
+                                        <span style="font-size: 0.7em; color: #aaa;">// VOICE_LINE_SECURE</span><br>
+                                        <span style="font-family: monospace; letter-spacing: 2px; color: var(--cp-red); filter: blur(3px);">
+                                            +98 *** *** **** <i class="fas fa-phone-alt" style="margin-left: 8px;"></i>
+                                        </span>
+                                        <span style="font-size: 1em; border: 1px solid var(--cp-red); color: var(--cp-red); padding: 0 4px; margin-left: 10px; cursor: pointer;" 
+                                              onclick="alert('// ACCESS DENIED \\n\\nVoice line is restricted to authorized personnel. Please establish initial handshake via Email.')">
+                                            [DECRYPT] <i class="fas fa-key" style="margin-left: 5px;"></i>
+                                        </span>
+                                    </li>
+
+                                    <li style="margin-bottom: 15px; border-left: 2px solid #0088cc; padding-left: 10px;">
+                                        <span style="font-size: 0.7em; color: #aaa;">// TELEGRAM_MESSAGING</span><br>
+                                        <a href="https://t.me/Raysoull" target="_blank" style="text-decoration: none; border: none; display: inline-flex; align-items: center; gap: 8px;">
+                                            <span style="color: #fff;">@Raysoull</span>
+                                            <i class="fab fa-telegram-plane" style="color: #0088cc;"></i> 
+                                        </a>
+                                    </li>
+
+                                    <li style="margin-bottom: 15px; border-left: 2px solid #5865F2; padding-left: 10px;">
+                                        <span style="font-size: 0.7em; color: #aaa;">// DISCORD</span><br>
+                                        <div style="display: inline-flex; align-items: center; gap: 8px; color: #ccc;">
+                                            <span>@__raysoul__</span>
+                                            <i class="fab fa-discord" style="color: #5865F2;"></i> 
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mission-card" style="flex: 1 1 300px; margin: 0; display: flex; flex-direction: column;">
+                                <h2><i class="fas fa-project-diagram"></i> NEURAL NODES</h2>
+
+                                <ul class="terminal-list" style="padding-left:0; list-style:none; flex-grow: 1;">
+                                    
+                                    <li style="margin-bottom: 15px; border-left: 2px solid #0077b5; padding-left: 10px;">
+                                        <span style="font-size: 0.7em; color: #aaa;">// PROFESSIONAL_NET</span><br>
+                                        <a href="https://www.linkedin.com/in/amir-mahdi-rasouli" target="_blank" style="text-decoration: none; border: none; display: inline-flex; align-items: center; gap: 8px;">
+                                            <span style="color: #fff;">LINKEDIN [VERIFIED]</span>
+                                            <i class="fab fa-linkedin" style="color: #0077b5;"></i>
+                                        </a>
+                                    </li>
+
+                                    <li style="margin-bottom: 15px; border-left: 2px solid #fff; padding-left: 10px;">
+                                        <span style="font-size: 0.7em; color: #aaa;">// PROJECTS</span><br>
+                                        <a href="https://github.com/1MahdiR" target="_blank" style="text-decoration: none; border: none; display: inline-flex; align-items: center; gap: 8px;">
+                                            <span style="color: #fff;">GITHUB REPO</span>
+                                            <i class="fab fa-github" style="color: #fff;"></i>
+                                        </a>
+                                    </li>
+
+                                    <li style="margin-bottom: 15px; border-left: 2px solid #0088cc; padding-left: 10px;">
+                                        <span style="font-size: 0.7em; color: #aaa;">// TELEGRAM_CHANNEL</span><br>
+                                        <a href="https://t.me/mr_var_log" target="_blank" style="text-decoration: none; border: none; display: inline-flex; align-items: center; gap: 8px;">
+                                            <span style="color: #fff;">@mr_var_log</span>
+                                            <i class="fas fa-broadcast-tower" style="color: #0088cc;"></i>
+                                        </a>
+                                    </li>
+
+                                    <li style="margin-bottom: 15px; border-left: 2px solid #ff0000; padding-left: 10px;">
+                                        <span style="font-size: 0.7em; color: #aaa;">// VISUAL_DB</span><br>
+                                        <a href="#" target="_blank" style="text-decoration: none; border: none; display: inline-flex; align-items: center; gap: 8px;">
+                                            <span style="color: #fff;">YOUTUBE CHANNEL</span>
+                                            <i class="fab fa-youtube" style="color: #ff0000;"></i>
+                                        </a>
+                                    </li>
+
+                                    <li style="margin-bottom: 15px; border-left: 2px solid #4285F4; padding-left: 10px;">
+                                        <span style="font-size: 0.7em; color: #aaa;">// ACADEMIC_INDEX</span><br>
+                                        <a href="#" target="_blank" style="text-decoration: none; border: none; display: inline-flex; align-items: center; gap: 8px;">
+                                            <span style="color: #fff;">GOOGLE SCHOLAR</span>
+                                            <i class="fas fa-graduation-cap" style="color: #4285F4;"></i>
+                                        </a>
+                                    </li>
+
+                                    <li style="margin-bottom: 15px; border-left: 2px solid #555; padding-left: 10px; opacity: 0.6; filter: grayscale(100%);">
+                                        <span style="font-size: 0.7em; color: #aaa;">// SOCIAL_MEDIA</span><br>
+                                        <div style="display: inline-flex; align-items: center; gap: 8px; color: #777; cursor: not-allowed;">
+                                            <span>INSTAGRAM [OFFLINE]</span>
+                                            <i class="fab fa-instagram"></i>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 30px; text-align: center; position: relative; padding: 20px; border: 1px dashed #333; background: rgba(0,0,0,0.2);">
+                            <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #050505; padding: 0 10px; color: #666; font-size: 0.8rem;">DATA_EXFILTRATION_PORT</span>
+                            
+                            <a href="assets/docs/Amir_Mahdi_Rasouli_CV.pdf" download class="hub-btn" style="display: inline-flex; flex-direction: row; width: auto; max-width: 100%; border-color: var(--cp-yellow); color: var(--cp-yellow);">
+                                <span>DOWNLOAD FULL CV DATA</span>
+                                <i class="fas fa-file-download" style="margin-left: 8px;"></i>
+                            </a>
+                            <p style="font-size: 0.7em; color: #555; margin-top: 10px;">SHA-256: 8a9d...f4e2 | Size: 114KB | Checked</p>
+                        </div>
+
                     </div>`
             }
         ]
@@ -633,6 +750,7 @@ function runSystemBoot() {
             const btn = document.createElement('div');
             btn.className = 'sub-nav-item';
             btn.innerText = item.label;
+            btn.dataset.target = item.label;
             
             if(index === 0) {
                 btn.classList.add('active');
