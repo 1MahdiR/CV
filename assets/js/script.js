@@ -33,9 +33,9 @@ const database = {
                             </p>
                             
                             <div class="hub-grid">
-                                <button class="hub-btn" onclick="document.querySelector('[data-target=Background]').click()">
+                                <button class="hub-btn" onclick="document.querySelector('[data-target=Connect]').click()">
                                     <i class="fas fa-history"></i>
-                                    <span>Background</span>
+                                    <span>Connect</span>
                                 </button>
 
                                 <button class="hub-btn" onclick="document.querySelector('[data-target=skills]').click()">
@@ -52,34 +52,8 @@ const database = {
                     </div>`
             },
             {
-                label: "Background",
-                content: `
-                    <div class="content-wrapper">
-                        <h1>CONTACT UPLINK</h1>
-                        <p>STATUS: <span class="highlight">AVAILABLE FOR HIRE</span></p>
-                        <p>Email: <span class="highlight">a.m.rasouli.n@gmail.com</span></p>
-                        <p>Phone: +98 996 699 8507</p>
-                        <p>Base: Tehran, Iran</p>
-                        <br>
-                        <h3>SECURE CHANNELS</h3>
-                        <p>LINKEDIN: /in/amir-mahdi-rasouli</p>
-                        <p>GITHUB: /amir-rasouli</p>
-                    </div>`
-            },
-            {
                 label: "Connect",
                 content: `
-                    <style>
-                        /* PAGE SPECIFIC STYLES */
-                        .status-bar { display: flex; gap: 15px; font-size: 0.75rem; color: #555; margin-bottom: 20px; border-bottom: 1px dashed #333; padding-bottom: 5px; flex-wrap: wrap; }
-                        .status-item i { margin-right: 5px; color: var(--cp-blue); }
-                        .burner-active { filter: grayscale(100%) contrast(1.5) brightness(0.8); }
-                        .burner-btn.active { background: var(--cp-red); color: #000; box-shadow: 0 0 15px var(--cp-red); }
-                        .hex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(20px, 1fr)); gap: 2px; opacity: 0.2; margin-bottom: 15px; }
-                        .hex { height: 4px; background: var(--cp-cyan); }
-                        .input-cyber { background: rgba(0,0,0,0.5); border: 1px solid #444; color: var(--cp-yellow); padding: 8px; font-family: monospace; width: 100%; margin-top: 5px; outline: none; transition: 0.3s; }
-                        .input-cyber:focus { border-color: var(--cp-yellow); box-shadow: 0 0 10px rgba(252, 238, 9, 0.2); }
-                    </style>
 
                     <div class="content-wrapper" id="connect-interface">
 
@@ -136,13 +110,13 @@ const database = {
                                 </li>
 
                                 <li style="margin-bottom: 15px;">
-                                    <a href="https://discord.com/users/" style="display: flex; justify-content: space-between; align-items: center; border-left: 2px solid #5865F2; padding: 10px; background: rgba(255,255,255,0.02);">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; border-left: 2px solid #5865F2; padding: 10px; background: rgba(255,255,255,0.02);">
                                         <div>
                                             <span style="font-size: 1em; color: #aaa; display: block;">// DISCORD</span>
-                                            <span style="color: #ccc;">@__raysoul__</span>
+                                            <span style="color: #fff;">@__raysoul__</span>
                                         </div>
                                         <svg viewBox="0 0 24 24" style="height:1.5em;fill:#5865F2;float:right;"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.23 10.23 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"></path></svg>
-                                    </a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -256,44 +230,259 @@ const database = {
             {
                 label: "Tech Stack",
                 content: `
-                    <div class="content-wrapper">
-                        <h1>TECHNICAL ARSENAL</h1>
-                        <h3>BACKEND & SYSTEMS</h3>
-                        <div class="skill-container">
-                            <div class="skill-label"><span>Python / Django / DRF</span><span>95%</span></div>
-                            <div class="progress-bar-bg"><div class="fill" style="width: 95%"></div></div>
+                <div class="content-wrapper">
+                    <h1 class="glitch-header">TECHNICAL ARSENAL</h1>
+
+                    <div class="skills-grid">
+
+                        <div class="skill-column">
+                            <h3>PROGRAMMING LANGUAGES</h3>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Python</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Java Script / Node.js</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Java</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>C/C++</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Rust</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-container">
-                            <div class="skill-label"><span>Docker / CI/CD (GitHub Actions)</span><span>85%</span></div>
-                            <div class="progress-bar-bg"><div class="fill" style="width: 85%"></div></div>
+                        
+                        <div class="skill-column">
+                            <h3>BACKEND & SYSTEMS</h3>
+                            
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Django / DRF</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Linux / Bash Scripting</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Docker / CI/CD</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>PostgreSQL / SQL Opt.</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Nginx / Web Servers</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-container">
-                            <div class="skill-label"><span>Linux / Bash Scripting</span><span>90%</span></div>
-                            <div class="progress-bar-bg"><div class="fill" style="width: 90%"></div></div>
+
+                        <div class="skill-column">
+                            <h3>ARTIFICIAL INTELLIGENCE</h3>
+                            
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Machine Learning</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Deep Learning</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Reinforcement Learning</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-container">
-                            <div class="skill-label"><span>Microservices / Distributed Systems</span><span>80%</span></div>
-                            <div class="progress-bar-bg"><div class="fill" style="width: 80%"></div></div>
-                        </div>
-                    </div>`
+                    </div>
+                </div>
+                    `
             },
             {
                 label: "Research",
                 content: `
-                    <div class="content-wrapper">
-                        <h1>RESEARCH & AI</h1>
-                        <p><strong>AI:</strong> Machine Learning, Deep Learning, Reinforcement Learning, TensorFlow.</p>
-                        <p><strong>Tools:</strong> SimPy, EdgeSimPy, Gem5, LaTeX.</p>
-                    </div>`
+                <div class="content-wrapper">
+                    <h1 class="glitch-header">RESEARCH</h1>
+
+                    <div class="skills-grid">
+
+                        <div class="skill-column">
+                            <h3>Research Fields</h3>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Edge/Fog Computing</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Distributed Computing</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Embedded and Real-Time Systems</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Cyber-Physical Systems</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Cloud Computing</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-column">
+                            <h3>Research Tools</h3>
+                            
+                            <div class="skill-container">
+                                <div class="skill-label"><span>LaTeX / Overleaf</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>SimPy</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>EdgeSimPy Simulator</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Gem5 Simulator</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    `
             },
             {
-                label: "Languages",
+                label: "Perks",
                 content: `
-                    <div class="content-wrapper">
-                        <h1>LANGUAGES</h1>
-                        <p><strong>English:</strong> Professional Working Proficiency.</p>
-                        <p><strong>Persian (Farsi):</strong> Native Speaker.</p>
-                    </div>`
+                <div class="content-wrapper">
+                    <h1 class="glitch-header">PERKS</h1>
+
+                    <div class="skills-grid">
+
+                        <div class="skill-column">
+                            <h3>Languages</h3>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Persian</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>English</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-column">
+                            <h3>Soft Skills</h3>
+                            
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Teamwork</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Mentorship</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Critical Analysis</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <div class="skill-label"><span>Problem Solving</span></div>
+                                <div class="dots-container">
+                                    <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                `
             }
         ]
     },

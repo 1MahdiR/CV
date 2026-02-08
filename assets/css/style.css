@@ -4,6 +4,9 @@
     --cp-blue: #00F0FF;
     --cp-green: #00ff41;
     --cp-cyan: #69f0f5; 
+    --cp-black: #0b0b0b;
+    --cp-dim: rgba(0, 240, 255, 0.1);
+    --cp-magenta: #ff006f;
     --cp-bg: #0b0b0b;
     --cp-bg-dark: #050505;
     --font-main: 'Rajdhani', sans-serif;
@@ -987,4 +990,40 @@ html.scroll-locked {
     overflow: hidden !important;
     touch-action: none; /* Disables touch gestures on the background */
     height: 100vh !important;
+}
+
+/* Two-Column Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2rem; /* Space between columns */
+}
+
+/* Mobile responsive: collapse to 1 column on small screens */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dotted Bar Styles */
+.dots-container {
+    display: flex;
+    gap: 4px; /* Space between dots */
+    margin-top: 5px;
+}
+
+.dot {
+    height: 8px;
+    flex: 1; /* Distribute space evenly */
+    background-color: #333; /* Inactive color */
+    transform: skewX(-20deg); /* Cyberpunk slant */
+    border: 1px solid #444;
+}
+
+/* Active Dot Color (Cyberpunk Yellow/Primary) */
+.dot.active {
+    background-color: var(--cp-cyan);
+    box-shadow: 0 0 5px var(--cp-cyan);
+    border-color: var(--cp-cyan);
 }
