@@ -1027,3 +1027,16 @@ html.scroll-locked {
     box-shadow: 0 0 5px var(--cp-cyan);
     border-color: var(--cp-cyan);
 }
+
+.simple-fade {
+    opacity: 0;
+    transform: translateY(10px); /* Start slightly down */
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

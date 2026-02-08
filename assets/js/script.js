@@ -743,7 +743,7 @@ function runSystemBoot() {
             }
         }, 100);
 
-        codeSpawnInterval = setInterval(spawnTypingCode, 200);
+        codeSpawnInterval = setInterval(spawnTypingCode, 500);
 
         let currentProgress = 10; 
         progressBar.style.width = currentProgress + "%";
@@ -926,18 +926,8 @@ function runSystemBoot() {
     // --- 5. TRANSITION CONTROLLER ---
     function finishLoading() {
         document.body.classList.add('distort-active');
-        const startTime = Date.now();
-        const duration = 250; 
-        function distortFrame() {
-            const elapsed = Date.now() - startTime;
-            if (elapsed < duration) {
-                const freqX = 0.01 + Math.random() * 0.05;
-                const freqY = 0.005 + Math.random() * 0.05;
-                turbulenceNode.setAttribute('baseFrequency', `${freqX} ${freqY}`);
-                requestAnimationFrame(distortFrame);
-            }
-        }
-        distortFrame();
+        
+        // REMOVED: Unused distortFrame logic and variables (startTime, duration) were here.
 
         const burst = setInterval(() => { fireGlitch(loader, 8, 50); }, 50);
 
@@ -1005,90 +995,28 @@ function runSystemBoot() {
     // --- CONTENT TYPING LOGIC ---
     function loadContent(htmlContent) {
         playTabSound();
-        contentDisplay.innerHTML = '<div class="decrypt-loader">> DECRYPTING DATA STREAM...</div>';
+        contentDisplay.innerHTML = htmlContent;
         
-        setTimeout(() => {
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = htmlContent.replace(/\+\]/g, "");
-            contentDisplay.innerHTML = ''; 
-            
-            const children = Array.from(tempDiv.children);
-            let finalChildren = children;
-            if (children.length === 1 && children[0].classList.contains('content-wrapper')) {
-                finalChildren = Array.from(children[0].children);
-            }
+        // 1. Animate Progress Bars (Keep this, it's cheap)
+        const bars = contentDisplay.querySelectorAll('.fill');
+        bars.forEach(bar => {
+            const w = bar.style.width;
+            bar.style.width = '0%';
+            setTimeout(() => bar.style.width = w, 50);
+        });
 
-            finalChildren.forEach((child, index) => {
-                const node = child.cloneNode(true);
-                contentDisplay.appendChild(node);
-                
-                if (node.classList.contains('mission-card') || node.classList.contains('content-wrapper')) {
-                    node.classList.add('scan-build');
-                } else if (['H1', 'H2'].includes(node.tagName)) {
-                    node.classList.add('header-glitch-in');
-                }
-                
-                node.style.opacity = '1';
-
-                if (['H1', 'H2', 'P', 'LI'].includes(node.tagName)) {
-                    typeTextSafely(node);
-                }
-                
-                if (node.classList.contains('mission-card') || node.tagName === 'DIV') {
-                    const childTexts = node.querySelectorAll('h1, h2, p, li, span:not(.fill)');
-                    childTexts.forEach(ct => typeTextSafely(ct));
-                }
-
-                if(node.classList.contains('skill-container')) {
-                    const bar = node.querySelector('.fill');
-                    if(bar) {
-                        const w = bar.style.width;
-                        bar.style.width = '0%'; 
-                        bar.style.transition = 'none'; 
-                        bar.offsetHeight; 
-                        bar.style.transition = 'width 1s ease-in-out'; 
-                        setTimeout(() => bar.style.width = w, 100);
-                    }
-                }
-            });
-            
-            setTimeout(() => fireGlitch(contentDisplay, 5, 150), 300);
-
-        }, 500); 
+        // 2. Animate Text Elements (CSS Class instead of JS Typing)
+        // Select all text-heavy elements
+        const textElements = contentDisplay.querySelectorAll('h1, h2, h3, p, li, .skill-label, .mission-card');
+        
+        textElements.forEach((el, index) => {
+            el.classList.add('simple-fade');
+            // Add a tiny delay for each element so they cascade in (50ms apart)
+            el.style.animationDelay = `${index * 0.05}s`; 
+        });
     }
 
-    function typeTextSafely(element) {
-        const textNodes = [];
-        const walk = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
-        let n;
-        while(n = walk.nextNode()) textNodes.push(n);
-
-        const originalTexts = textNodes.map(n => n.nodeValue);
-        textNodes.forEach(n => n.nodeValue = '');
-
-        let nodeIndex = 0;
-        let charIndex = 0;
-        const charsPerTick = 3;
-
-        function typeLoop() {
-            if (nodeIndex >= textNodes.length) return;
-
-            const currentNode = textNodes[nodeIndex];
-            const fullText = originalTexts[nodeIndex];
-
-            if (charIndex < fullText.length) {
-                const nextChunk = fullText.substring(charIndex, charIndex + charsPerTick);
-                currentNode.nodeValue += nextChunk;
-                charIndex += charsPerTick;
-                setTimeout(typeLoop, 2); 
-            } else {
-                nodeIndex++;
-                charIndex = 0;
-                setTimeout(typeLoop, 2);
-            }
-        }
-        typeLoop();
-    }
+    // REMOVED: Unused 'typeTextSafely' function was here.
 
     // --- SIDEBAR STATS ---
     function generateSidebarStats() {
