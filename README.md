@@ -3,7 +3,7 @@
 > A high-performance, cyberpunk-themed personal portfolio website featuring interactive terminal elements, glitch aesthetics, and immersive audio effects.
 
 ![Version](https://img.shields.io/badge/version-2.0.1-cyan.svg)
-![Status](https://img.shields.io/badge/system-Under%20Development-orange.svg)
+![Status](https://img.shields.io/badge/system-Operational-green.svg)
 
 ## 📖 Overview
 
