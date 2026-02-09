@@ -189,7 +189,7 @@ const database = {
                                     onmouseout="this.style.background='rgba(255,255,255,0.02)'">
                                         
                                         <div>
-                                            <span style="font-size: 1em; color: #aaa; display: block;">// ACADEMIC_INDEX</span>
+                                            <span style="font-size: 1em; color: #aaa; display: block;">// ACADEMIC INDEX</span>
                                             <span style="color: #fff;">GOOGLE SCHOLAR</span>
                                         </div>
                                         <svg viewBox="0 0 24 24" style="height:1.5em;fill:#4285F4;float:right;"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.547 11.249 14.958 9.5 12 9.5c-2.958 0-5.547 1.749-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"></path></svg>
@@ -492,7 +492,7 @@ const database = {
                 label: "Professional",
                 content: `
                     <div class="content-wrapper">
-                        <h1 class="glitch-header">MISSION LOG (PROFESSIONAL)</h1>
+                        <h1 class="glitch-header">PROFESSIONAL</h1>
 
                         <div class="mission-card">
                             <h2>BACKEND ENGINEER</h2>
@@ -513,7 +513,7 @@ const database = {
                 label: "Academic",
                 content: `
                     <div class="content-wrapper">
-                        <h1 class="glitch-header" style="width:fit-content;">MISSION LOG (ACADEMIC)</h1>
+                        <h1 class="glitch-header" style="width:fit-content;">ACADEMIC</h1>
                         <p style="border: solid 1px var(--cp-cyan);width:fit-content;padding:8px;">
                             <a href="https://scholar.google.com/citations?user=bBcK7gUAAAAJ&hl=en&oi=ao" target="_blank" style="color: var(--cp-cyan); text-decoration: none; font-weight: bold; border:none;">
                                 VIEW PUBLICATIONS ON SCHOLAR&nbsp;<svg viewBox="0 0 24 24" style="height:1.5em;fill:var(--cp-cyan);float:right;"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.547 11.249 14.958 9.5 12 9.5c-2.958 0-5.547 1.749-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"></path></svg>
@@ -680,27 +680,49 @@ const database = {
     archives: {
         items: [
             {
-                label: "Education",
+                label: "Library",
                 content: `
                     <div class="content-wrapper">
-                        <h1>DATA ARCHIVES (EDUCATION)</h1>
-                        <p><strong class="highlight">M.Sc. in Computer Engineering</strong> @ Sharif University of Technology</p>
-                        <p>Sep 2023 - Present | GPA: 17/20</p>
-                        <p><em>Thesis: Reliability-Aware Task Mapping and Scheduling in Edge Computing Environments.</em></p>
-                        <br>
-                        <p><strong class="highlight">B.Sc. in Computer Engineering</strong> @ Arak University</p>
-                        <p>Sep 2019 - Sep 2023 | GPA: 18/20 (Ranked 1st).</p>
-                    </div>`
+                        <h1>LIBRARY</h1>
+                        
+                        <div style="display: flex; gap: 20px; border: 1px solid #333; padding: 15px; margin-bottom: 20px; background: rgba(0,0,0,0.3); align-items: start;">
+                            
+                            <div style="width: 80px; height: 120px; flex-shrink: 0; border: 1px solid #555; background-color: #111;">
+                                <img src="assets/img/Learning_api_styles.jpg" 
+                                     alt="Book Cover" 
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            
+                            <div>
+                                <h3 style="margin-top: 0; color: #fff; font-size: 1.1em;">Learning API Styles: Understanding the Trade-Offs of Common APIs and Choosing the Correct Solutions</h3>
+                                <p style="font-size: 0.85em; opacity: 0.7; margin-bottom: 10px; text-transform: uppercase;">
+                                    Author: Lukasz Dynowski and Marcin Dulak
+                                </p>
+                                <p style="font-size: 0.9em; margin-bottom: 10px;">
+                                    A practical guide to navigating the trade-offs of REST, GraphQL, gRPC, and AsyncAPI, empowering you to choose the right architecture for your specific technical needs.
+                                </p>
+                                <a href="https://www.amazon.de/-/en/Learning-API-Styles-Understanding-Trade-Offs/dp/1098153995" target="_blank" style="font-size: 0.8em; color: #0ff; text-decoration: none; border-bottom: 1px solid #0ff;">
+                                    [OFFICIAL SOURCE]
+                                </a>
+                            </div>
+                        </div>
+                        </div>`
             },
             {
-                label: "Publications",
+                label: "News",
                 content: `
                     <div class="content-wrapper">
-                        <h1>PUBLICATIONS</h1>
-                        <p>> <strong>RASOUL:</strong> A Reliability-Aware Task Allocation Strategy... (IEEE Internet of Things Journal, 2025).</p>
-                        <p>> <strong>Genetic-based Framework:</strong> Joint Latency and Cost Reduction... (CPSAT, 2024).</p>
-                        <p>> <strong>Two-State Energy-Efficient Strategy:</strong> (IEEE Embedded System Letters, 2025).</p>
-                        <p>> <strong>TORE-NET:</strong> Task Replication in MEC (Submitted to RTAS 2026).</p>
+                        <h1>NEWS</h1>
+                        
+                        <article style="border-left: 3px solid #0ff; padding-left: 20px; margin-bottom: 30px;">
+                            <header>
+                                <h2 style="margin-bottom: 5px; color: #fff;">HELLO WORLD!</h2>
+                                <div style="font-size: 0.8em; margin-bottom: 15px;">
+                                    <span>DATE: 2/9/2026</span>
+                                </div>
+                            </header>
+                            <p>Hello world! Welcome to my digital garden.</p>
+                        </article>
                     </div>`
             }
         ]
