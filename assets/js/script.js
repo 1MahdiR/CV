@@ -231,7 +231,7 @@ const database = {
                 label: "Tech Stack",
                 content: `
                 <div class="content-wrapper">
-                    <h1 class="glitch-header">TECHNICAL ARSENAL</h1>
+                    <h1 class="glitch-header">TECH STACK</h1>
 
                     <div class="skills-grid">
 
@@ -492,18 +492,20 @@ const database = {
                 label: "Professional",
                 content: `
                     <div class="content-wrapper">
-                        <h1>MISSION LOG (PROFESSIONAL)</h1>
+                        <h1 class="glitch-header">MISSION LOG (PROFESSIONAL)</h1>
+                        
                         <div class="mission-card">
                             <h2>BACKEND ENGINEER</h2>
                             <p class="highlight">Aalibaf Industrial Project (Sharif University) | Oct 2024 - Mar 2025</p>
-                            <p>Architected scalable backend services using Django and Django REST Framework. Designed high-performance REST APIs to handle industrial data traffic.</p>
-                            <div class="tags"><span>DJANGO</span><span>REST API</span><span>DOCKER</span></div>
+                            <p>Architected and developed scalable backend services using Django and Django REST Framework. Designed high-performance REST APIs to handle industrial data traffic and managed containerized application deployment using Docker.</p>
+                            <div class="tags"><span>DJANGO</span><span>REST API</span><span>DOCKER</span><span>CI/CD</span></div>
                         </div>
+
                         <div class="mission-card">
                             <h2>BACKEND & SYSTEMS ENGINEER</h2>
                             <p class="highlight">Roupel Dataware Co. | July 2021 - Sep 2023</p>
-                            <p>Developed core backend architecture for data-centric web applications. Designed efficient database schemas for large-scale datasets reducing query overhead.</p>
-                            <div class="tags"><span>LINUX</span><span>POSTGRESQL</span><span>AUTOMATION</span></div>
+                            <p>Developed core backend architecture for data-centric web applications and processing pipelines. Designed efficient database schemas for large-scale datasets and configured Linux environments for secure application runtime.</p>
+                            <div class="tags"><span>LINUX</span><span>POSTGRESQL</span><span>AUTOMATION</span><span>BASH</span></div>
                         </div>
                     </div>`
             },
@@ -511,12 +513,20 @@ const database = {
                 label: "Academic",
                 content: `
                     <div class="content-wrapper">
-                        <h1>MISSION LOG (ACADEMIC)</h1>
+                        <h1 class="glitch-header">MISSION LOG (ACADEMIC)</h1>
+
                         <div class="mission-card">
                             <h2>RESEARCH ASSISTANT</h2>
                             <p class="highlight">Institute for Research in Fundamental Sciences (IPM) | Jan 2024 - Present</p>
-                            <p>Conducted research on resource allocation and optimization algorithms in Edge Computing. Developed Python-based simulation frameworks for IoT reliability analysis.</p>
-                            <div class="tags"><span>R&D</span><span>PYTHON</span><span>EDGE COMPUTING</span></div>
+                            <p>Conducting research on resource allocation and optimization algorithms in Edge Computing. Developing Python-based simulation frameworks for IoT reliability analysis and co-authoring research on embedded systems.</p>
+                            <div class="tags"><span>R&D</span><span>PYTHON</span><span>EDGE COMPUTING</span><span>SIMULATION</span></div>
+                        </div>
+
+                        <div class="mission-card">
+                            <h2>TEACHING ASSISTANT</h2>
+                            <p class="highlight">Sharif Univ. of Tech & Arak University | 2021 - Present</p>
+                            <p>Instructed system-level courses including Edge Computing, Real-time Systems, and Embedded Systems. Previously taught Python, C/C++, and Software Engineering.</p>
+                            <div class="tags"><span>MENTORSHIP</span><span>SYSTEMS</span><span>C/C++</span><span>PYTHON</span></div>
                         </div>
                     </div>`
             },
@@ -524,12 +534,134 @@ const database = {
                 label: "Projects",
                 content: `
                     <div class="content-wrapper">
-                        <h1>SIDE QUESTS</h1>
-                        <ul style="list-style:none; color:#bbb;">
-                            <li>> <strong>DJUNGOOL:</strong> Django Code Generator CLI (Automation, String Parsing).</li>
-                            <li>> <strong>NMAPY:</strong> Interactive Network Scanner (Python, Socket API).</li>
-                            <li>> <strong>RASOUL:</strong> Reliability-Aware Resource Allocation Algorithm.</li>
-                        </ul>
+                        <h1 class="glitch-header">PROJECTS</h1>
+
+                        <div class="mission-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h2 style="margin: 0;">DJUNGOOL</h2>
+                                <a href="https://github.com/1MahdiR/Djungool" target="_blank" title="View Source" style="border:none; font-size:1.6em;">
+                                    <svg viewBox="0 0 24 24" style="height: 1.5em; width: 1.5em; fill: var(--cp-yellow); display: block; cursor: pointer; transition: 0.2s;" onmouseover="this.style.fill='#fff'" onmouseout="this.style.fill='var(--cp-yellow)'">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="highlight">Django Code Generator CLI</p>
+                            <p>A command-line tool that automatically generates Django database code based on user inputs. Automates repetitive setup tasks.</p>
+                            <div class="tags"><span>PYTHON</span><span>AUTOMATION</span><span>CLI</span></div>
+                        </div>
+
+                        <div class="mission-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h2 style="margin: 0;">NMAPY</h2>
+                                <a href="https://github.com/1MahdiR/nmapy" target="_blank" title="View Source" style="border:none; font-size:1.6em;">
+                                    <svg viewBox="0 0 24 24" style="height: 1.5em; width: 1.5em; fill: var(--cp-yellow); display: block; cursor: pointer; transition: 0.2s;" onmouseover="this.style.fill='#fff'" onmouseout="this.style.fill='var(--cp-yellow)'">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="highlight">Interactive Network Scanner</p>
+                            <p>Developed a Python CLI tool to scan local networks, detecting active devices and open ports using raw socket connections.</p>
+                            <div class="tags"><span>SOCKET API</span><span>TCP/ICMP</span><span>NETWORKING</span></div>
+                        </div>
+
+                        <div class="mission-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h2 style="margin: 0;">NETKORT</h2>
+                                <a href="https://github.com/1MahdiR/Netkort" target="_blank" title="View Source" style="border:none; font-size:1.6em;">
+                                    <svg viewBox="0 0 24 24" style="height: 1.5em; width: 1.5em; fill: var(--cp-yellow); display: block; cursor: pointer; transition: 0.2s;" onmouseover="this.style.fill='#fff'" onmouseout="this.style.fill='var(--cp-yellow)'">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="highlight">Android Network Scanner</p>
+                            <p>A native mobile network analysis tool designed to streamline diagnostics and connectivity tasks on Android devices.</p>
+                            <div class="tags"><span>ANDROID</span><span>JAVA</span><span>NETWORKING</span></div>
+                        </div>
+
+                        <div class="mission-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h2 style="margin: 0;">RASOUL</h2>
+                                <a href="https://github.com/1MahdiR/Reliability-Aware-Task-Allocation-Strategy-In-MEC" target="_blank" title="View Source" style="border:none; font-size:1.6em;">
+                                    <svg viewBox="0 0 24 24" style="height: 1.5em; width: 1.5em; fill: var(--cp-yellow); display: block; cursor: pointer; transition: 0.2s;" onmouseover="this.style.fill='#fff'" onmouseout="this.style.fill='var(--cp-yellow)'">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="highlight">Reliability-Aware Task Allocation Strategy for Mobile Edge Computing Networks</p>
+                            <p>Engineered a fault-tolerant task mapping algorithm for distributed edge nodes to optimize resource utilization.</p>
+                            <div class="tags"><span>ALGORITHMS</span><span>DISTRIBUTED SYS</span><span>SIMULATION</span></div>
+                        </div>
+
+                        <div class="mission-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h2 style="margin: 0;">DEDUCTIVE FAULT SIMULATOR</h2>
+                                <a href="https://github.com/1MahdiR/Deductive-Fault-Simulator" target="_blank" title="View Source" style="border:none; font-size:1.6em;">
+                                    <svg viewBox="0 0 24 24" style="height: 1.5em; width: 1.5em; fill: var(--cp-yellow); display: block; cursor: pointer; transition: 0.2s;" onmouseover="this.style.fill='#fff'" onmouseout="this.style.fill='var(--cp-yellow)'">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="highlight">Logic Circuit Simulation</p>
+                            <p>A simulation tool for fault detection in digital logic circuits using deductive fault simulation techniques.</p>
+                            <div class="tags"><span>VLSI</span><span>TESTING</span><span>PYTHON</span></div>
+                        </div>
+
+                         <div class="mission-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h2 style="margin: 0;">THE 48 LAWS</h2>
+                                <a href="https://github.com/1MahdiR/the-48-laws-of-power" target="_blank" title="View Live Site" style="border:none; font-size:1.6em;">
+                                    <svg viewBox="0 0 24 24" style="height: 1.5em; width: 1.5em; fill: var(--cp-yellow); display: block; cursor: pointer; transition: 0.2s;" onmouseover="this.style.fill='#fff'" onmouseout="this.style.fill='var(--cp-yellow)'">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="highlight">Interactive E-Book</p>
+                            <p>A web-based interactive summary of Robert Greene's "The 48 Laws of Power" built with Next.js <a href="https://1mahdir.github.io/the-48-laws-of-power" target="_blank">LIVE DEMO</a>.</p>
+                            <div class="tags"><span>NEXT.JS</span><span>REACT</span><span>WEB</span></div>
+                        </div>
+
+                         <div class="mission-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h2 style="margin: 0;">NFA TO DFA</h2>
+                                <a href="https://github.com/1MahdiR/NFA_to_DFA_convertor" target="_blank" title="View Source" style="border:none; font-size:1.6em;">
+                                    <svg viewBox="0 0 24 24" style="height: 1.5em; width: 1.5em; fill: var(--cp-yellow); display: block; cursor: pointer; transition: 0.2s;" onmouseover="this.style.fill='#fff'" onmouseout="this.style.fill='var(--cp-yellow)'">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="highlight">Automata Theory Tool</p>
+                            <p>An algorithmic tool designed to convert Non-Deterministic Finite Automata (NFA) to Deterministic Finite Automata (DFA).</p>
+                            <div class="tags"><span>ALGORITHMS</span><span>COMPUTATION</span><span>AUTOMATA</span></div>
+                        </div>
+
+                         <div class="mission-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h2 style="margin: 0;">BACKSTAB SIMULATOR</h2>
+                                <a href="https://github.com/1MahdiR/backstab-game-simulation" target="_blank" title="View Source" style="border:none; font-size:1.6em;">
+                                    <svg viewBox="0 0 24 24" style="height: 1.5em; width: 1.5em; fill: var(--cp-yellow); display: block; cursor: pointer; transition: 0.2s;" onmouseover="this.style.fill='#fff'" onmouseout="this.style.fill='var(--cp-yellow)'">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="highlight">Game Mechanics Simulation</p>
+                            <p>A simulation of the 'Backstab' game mechanics using Python, exploring social deduction and game theory strategies.</p>
+                            <div class="tags"><span>SIMULATION</span><span>GAME THEORY</span><span>PYTHON</span></div>
+                        </div>
+
+                         <div class="mission-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h2 style="margin: 0;">RHYTHMBOX WRAPPED</h2>
+                                <a href="https://github.com/1MahdiR/Rhythmbox-Wrapped" target="_blank" title="View Source" style="border:none; font-size:1.6em;">
+                                    <svg viewBox="0 0 24 24" style="height: 1.5em; width: 1.5em; fill: var(--cp-yellow); display: block; cursor: pointer; transition: 0.2s;" onmouseover="this.style.fill='#fff'" onmouseout="this.style.fill='var(--cp-yellow)'">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="highlight">Music Data Analysis</p>
+                            <p>Generates listening statistics and visualization for the Rhythmbox music player, similar to Spotify Wrapped.</p>
+                            <div class="tags"><span>DATA ANALYSIS</span><span>VISUALIZATION</span><span>PYTHON</span></div>
+                        </div>
+
                     </div>`
             }
         ]
