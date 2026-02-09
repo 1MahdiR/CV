@@ -493,18 +493,18 @@ const database = {
                 content: `
                     <div class="content-wrapper">
                         <h1 class="glitch-header">MISSION LOG (PROFESSIONAL)</h1>
-                        
+
                         <div class="mission-card">
                             <h2>BACKEND ENGINEER</h2>
                             <p class="highlight">Aalibaf Industrial Project (Sharif University) | Oct 2024 - Mar 2025</p>
-                            <p>Architected and developed scalable backend services using Django and Django REST Framework. Designed high-performance REST APIs to handle industrial data traffic and managed containerized application deployment using Docker.</p>
+                            <p>Architected and developed scalable backend services using <strong>Django</strong> and <strong>Django REST Framework</strong>. Designed high-performance REST APIs to handle industrial data traffic, ensuring low-latency responses. Managed containerized application deployment using <strong>Docker</strong> and automated CI pipelines to streamline delivery.</p>
                             <div class="tags"><span>DJANGO</span><span>REST API</span><span>DOCKER</span><span>CI/CD</span></div>
                         </div>
 
                         <div class="mission-card">
                             <h2>BACKEND & SYSTEMS ENGINEER</h2>
                             <p class="highlight">Roupel Dataware Co. | July 2021 - Sep 2023</p>
-                            <p>Developed core backend architecture for data-centric web applications and processing pipelines. Designed efficient database schemas for large-scale datasets and configured Linux environments for secure application runtime.</p>
+                            <p>Developed the core backend architecture for data-centric web applications and processing pipelines using <strong>Django</strong>. Designed and implemented efficient database schemas for large-scale datasets, reducing query overhead. Built internal automation tools to streamline data processing and integration workflows. Configured Linux environments to support stable and secure application runtime.</p>
                             <div class="tags"><span>LINUX</span><span>POSTGRESQL</span><span>AUTOMATION</span><span>BASH</span></div>
                         </div>
                     </div>`
@@ -513,20 +513,31 @@ const database = {
                 label: "Academic",
                 content: `
                     <div class="content-wrapper">
-                        <h1 class="glitch-header">MISSION LOG (ACADEMIC)</h1>
-
+                        <h1 class="glitch-header" style="width:fit-content;">MISSION LOG (ACADEMIC)</h1>
+                        <p style="border: solid 1px var(--cp-cyan);width:fit-content;padding:8px;">
+                            <a href="https://scholar.google.com/citations?user=bBcK7gUAAAAJ&hl=en&oi=ao" target="_blank" style="color: var(--cp-cyan); text-decoration: none; font-weight: bold; border:none;">
+                                VIEW PUBLICATIONS ON SCHOLAR&nbsp;<svg viewBox="0 0 24 24" style="height:1.5em;fill:var(--cp-cyan);float:right;"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.547 11.249 14.958 9.5 12 9.5c-2.958 0-5.547 1.749-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"></path></svg>
+                            </a>
+                        </p>
                         <div class="mission-card">
                             <h2>RESEARCH ASSISTANT</h2>
                             <p class="highlight">Institute for Research in Fundamental Sciences (IPM) | Jan 2024 - Present</p>
-                            <p>Conducting research on resource allocation and optimization algorithms in Edge Computing. Developing Python-based simulation frameworks for IoT reliability analysis and co-authoring research on embedded systems.</p>
-                            <div class="tags"><span>R&D</span><span>PYTHON</span><span>EDGE COMPUTING</span><span>SIMULATION</span></div>
+                            <p>Conducted research on resource allocation and optimization algorithms in <strong>Edge Computing</strong>. Developed <strong>Python</strong>-based simulation frameworks for IoT reliability analysis. Co-authored research papers on embedded systems and real-time analysis.</p>
+                            <div class="tags"><span>EMBEDDED SYSTEMS</span><span>PYTHON</span><span>IOT</span><span>SIMULATION</span></div>
                         </div>
 
                         <div class="mission-card">
-                            <h2>TEACHING ASSISTANT</h2>
-                            <p class="highlight">Sharif Univ. of Tech & Arak University | 2021 - Present</p>
-                            <p>Instructed system-level courses including Edge Computing, Real-time Systems, and Embedded Systems. Previously taught Python, C/C++, and Software Engineering.</p>
-                            <div class="tags"><span>MENTORSHIP</span><span>SYSTEMS</span><span>C/C++</span><span>PYTHON</span></div>
+                            <h2>M.SC. IN COMPUTER ENGINEERING - COMPUTER ARCHITECTURE</h2>
+                            <p class="highlight">Sharif University of Technology | Sep 2023 - Present</p>
+                            <p><strong>Thesis:</strong> Reliability-Aware Task Mapping and Scheduling in Edge Computing Environments.<br/><strong>Research:</strong> Member of the <a target="_blank" href="http://cpslab.ce.sharif.edu"><strong>Cyber-Physical Systems Lab (CPSLab)</strong></a> under <a target="_blank" href="https://scholar.google.com/citations?user=Dhfls4sAAAAJ&hl=en&oi=ao">Dr. Mohsen Ansari</a>, focusing on edge/fog/cloud computing, distributed resource management, embedded and real-time systems.<br/><strong>Teaching Assistant:</strong> Edge Computing, Cyber-Physical Systems, Real-time Systems, Embedded Systems, and Digital Logic Design.<br/><strong>Academic Service:</strong> Peer reviewer for IEEE Internet of Things Journal; Head of Executive Team, CSICC 2025; Scientific/Technical Staff for HardWar (hardware design contest) (2024, 2025).</p>
+                            <div class="tags"><span>EDGE COMPUTING</span><span>CPSLAB</span><span>IEEE</span><span>RESEARCH</span></div>
+                        </div>
+
+                        <div class="mission-card">
+                            <h2>B.SC. IN COMPUTER ENGINEERING</h2>
+                            <p class="highlight">Arak University | Sep 2019 - Sep 2023</p>
+                            <p><strong>Honors:</strong> <strong>Ranked 1st</strong> in Cumulative GPA among the Computer Engineering Department, securing admission to <strong>Sharif University of Technology</strong>.<br/><strong>Research:</strong> Undergraduate research assistant under <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=xNkFvkEAAAAJ">Prof. Rahmani</a>; Implemented a university-wide cloud computing platform for academic and research purposes.<br/><strong>Teaching Assistant:</strong> Core hardware/software courses including Computer Architecture, Microprocessors, C/C++/Python Programming, and Software Engineering.<br/><strong>Leadership:</strong> Elected as secretary of the Computer Engineering Association (2021-2022); organized technical workshops and managed student activities.</p>
+                            <div class="tags"><span>CLOUD COMPUTING</span><span>TOP RANK</span><span>LEADERSHIP</span><span>C/C++/PYTHON</span></div>
                         </div>
                     </div>`
             },
