@@ -45,7 +45,7 @@ const database = {
 
                                 <button class="hub-btn" onclick="document.querySelector('[data-target=missions]').click()">
                                     <i class="fas fa-tasks"></i>
-                                    <span>Missions</span>
+                                    <span>Experiences</span>
                                 </button>
                             </div>
                         </div>
@@ -536,7 +536,7 @@ const database = {
                         <div class="mission-card">
                             <h2>B.SC. IN COMPUTER ENGINEERING</h2>
                             <p class="highlight">Arak University | Sep 2019 - Sep 2023</p>
-                            <p><strong>Honors:</strong> <strong>Ranked 1st</strong> in Cumulative GPA among the Computer Engineering Department, securing admission to <strong>Sharif University of Technology</strong>.<br/><strong>Research:</strong> Undergraduate research assistant under <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=xNkFvkEAAAAJ">Prof. Rahmani</a>; Implemented a university-wide cloud computing platform for academic and research purposes.<br/><strong>Teaching Assistant:</strong> Core hardware/software courses including Computer Architecture, Microprocessors, C/C++/Python Programming, and Software Engineering.<br/><strong>Leadership:</strong> Elected as secretary of the Computer Engineering Association (2021-2022); organized technical workshops and managed student activities.</p>
+                            <p><strong>Honors:</strong> <strong>Ranked 1st</strong> in Cumulative GPA. Awarded "Exceptional Talent" status, securing <strong>direct admission</strong> to Sharif University of Technology (exempt from national entrance exam).<br/><strong>Research:</strong> Undergraduate research assistant under <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=xNkFvkEAAAAJ">Prof. Rahmani</a>; Implemented a university-wide cloud computing platform for academic and research purposes.<br/><strong>Teaching Assistant:</strong> Core hardware/software courses including Computer Architecture, Microprocessors, C/C++/Python Programming, and Software Engineering.<br/><strong>Leadership:</strong> Elected as secretary of the Computer Engineering Association (2021-2022); organized technical workshops and managed student activities.</p>
                             <div class="tags"><span>CLOUD COMPUTING</span><span>TOP RANK</span><span>LEADERSHIP</span><span>C/C++/PYTHON</span></div>
                         </div>
                     </div>`
