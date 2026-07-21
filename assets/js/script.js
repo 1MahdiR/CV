@@ -557,7 +557,7 @@ const database = {
                                 </a>
                             </div>
                             <p class="highlight">Performance benchmarks of Nginx, Python (aiohttp), and Rust (Axum) API gateways under throttled and unthrottled concurrent loads</p>
-                            <p>A repository contains the architecture, configuration, and performance evaluation benchmarks for an API Rate Limiter Gateway implemented across three distinct proxy engines: Nginx, Python (aiohttp), and Rust (Axum/Tokio).</p>
+                            <p>A repository that contains the architecture, configuration, and performance evaluation benchmarks for an API Rate Limiter Gateway implemented across three distinct proxy engines: Nginx, Python (aiohttp), and Rust (Axum/Tokio).</p>
                             <div class="tags"><span>PYTHON</span><span>AUTOMATION</span><span>CLI</span></div>
                         </div>
 
