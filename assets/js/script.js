@@ -734,7 +734,29 @@ const database = {
                                 </a>
                             </div>
                         </div>
-                        </div>`
+
+                        <div style="display: flex; gap: 20px; border: 1px solid #333; padding: 15px; margin-bottom: 20px; background: rgba(0,0,0,0.3); align-items: start;">
+                            
+                            <div style="width: 80px; height: 120px; flex-shrink: 0; border: 1px solid #555; background-color: #111;">
+                                <img src="assets/img/Linux_Command_Line.jpg" 
+                                     alt="Book Cover" 
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            
+                            <div>
+                                <h3 style="margin-top: 0; color: #fff; font-size: 1.1em;">The Linux Command Line</h3>
+                                <p style="font-size: 0.85em; opacity: 0.7; margin-bottom: 10px; text-transform: uppercase;">
+                                    Author: William E. Shotts Jr.
+                                </p>
+                                <p style="font-size: 0.9em; margin-bottom: 10px;">
+                                    A friendly, comprehensive guide that takes you from total terminal beginner to writing your own Bash automation scripts.
+                                </p>
+                                <a href="https://www.kea.nu/files/textbooks/humblesec/thelinuxcommandline.pdf" target="_blank" style="font-size: 0.8em; color: #0ff; text-decoration: none; border-bottom: 1px solid #0ff;">
+                                    [OFFICIAL SOURCE]
+                                </a>
+                            </div>
+                        </div>
+                    </div>`
             },
             {
                 label: "News",
